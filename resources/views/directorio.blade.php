@@ -18,8 +18,8 @@
                 <div class="p-6">
 
                 <p>
-                    <a href="#" class="btn btn-primary">Agregar nuevo</a>
-                    <a href="#" class="btn btn-success">Buscar</a>
+                    <a href="{{route('contacto.agregar')}}" class="btn btn-primary">Agregar nuevo</a>
+                    <a href="{{route('contacto.buscar')}}" class="btn btn-success">Buscar</a>
                 </p>
 
                 <table class="table">
@@ -32,18 +32,23 @@
                         <th scope="col">Eliminar</th>
                     </thead>
                     <tbody>
+                        @foreach ($contactos as $contacto)
+
                             <tr>
-                                <td>0001</td>
-                                <td>Julio</td>
-                                <td>Cortez</td>
-                                <td>9999</td>
+                                    
+                                
+                                <td>{{$contacto->codigoEntrada}}</td>
+                                <td>{{$contacto->nombre}}</td>
+                                <td>{{$contacto->apellido}}</td>
+                                <td>{{$contacto->telefono}}</td>
                                 <td>
                                     <a href="#" class="btn btn-info">Ver</a>
                                 </td>
                                 <td>
-                                    <a href="#" class="btn btn-danger">Eliminar</a>
+                                    <a href="{{route('contacto.eliminar', $contacto->codigoEntrada)}}" class="btn btn-danger">Eliminar</a>
                                 </td>
                             </tr>
+                        @endforeach
                     </tbody>
 
                 </table>

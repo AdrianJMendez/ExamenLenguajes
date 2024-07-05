@@ -43,9 +43,9 @@
                             <h3 class="card-header">Crear Nueva Entrada Directorio</h3>
                             <div class="card-body">
                                 <p class="card-text">
-                                    <form>
+                                    <form action="{{route('contacto.guardar')}}" method="POST">
                                         <label for="">C&oacute;digo</label>
-                                        <input type="text" name="codigo" class="form-control">
+                                        <input type="text" name="codigoEntrada" class="form-control">
                                         <label for="">Nombre</label>
                                         <input type="text" name="nombre" class="form-control">
                                         <label for="">Apellido</label>
@@ -55,9 +55,8 @@
                                         <label for="">Correo</label>
                                         <input type="text" name="correo" class="form-control">
                                         
-                                        
-                                        <button class="btn btn-primary">Guardar</button>
-                                        <a href="#" class="btn btn-info">Regresar</a>
+                                        <button type="submit" class="btn btn-primary">Guardar</button>
+                                        <a href="{{route('directorio.mostrar')}}" type="submit" class="btn btn-info">Regresar</a>
                                         
                                     </form>
                                 </p>
