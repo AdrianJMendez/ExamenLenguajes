@@ -10,6 +10,11 @@ class contactoController extends Controller
         $contactos = contacto::all();
         return view('directorio', compact('contactos'));
     }
+    
+    public function verContacto(){
+        
+        return view('vercontactos');
+    }
 
     public function buscarContacto(){
         return view('buscar');

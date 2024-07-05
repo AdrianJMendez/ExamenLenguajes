@@ -9,6 +9,8 @@ Route::get('/', function () {
 
 Route::get('/directorio', [contactoController::class, 'directorioMostrar'])->name('directorio.mostrar');
 
+Route::get('/directorio/contacto', [contactoController::class, 'verContacto'])->name('contacto.ver');
+
 Route::get('/buscar/contacto', [contactoController::class, 'buscarContacto'])->name('contacto.buscar');
 //Route::get('/buscar/contacto', [contactoController::class, 'Contacto'])->name('contacto.buscar');
 

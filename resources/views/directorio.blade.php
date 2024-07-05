@@ -42,7 +42,7 @@
                                 <td>{{$contacto->apellido}}</td>
                                 <td>{{$contacto->telefono}}</td>
                                 <td>
-                                    <a href="#" class="btn btn-info">Ver</a>
+                                    <a href="{{route('contacto.ver')}}" class="btn btn-info">Ver</a>
                                 </td>
                                 <td>
                                     <a href="{{route('contacto.eliminar', $contacto->codigoEntrada)}}" class="btn btn-danger">Eliminar</a>
